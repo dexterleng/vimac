@@ -8,6 +8,7 @@
 
 import Cocoa
 import RxSwift
+import Segment
 
 class ScrollModeViewController: ModeViewController {
     private let disposeBag = DisposeBag()
@@ -62,6 +63,7 @@ class ScrollModeViewController: ModeViewController {
         let escEvents = inputListener.keyDownEvents.filter { $0.keyCode == kVK_Escape }
         return escEvents
             .bind(onNext: { [weak self] _ in
+                Analytics.shared().track("Scroll Mode Exited")
                 self?.modeCoordinator?.exitMode()
             })
     }

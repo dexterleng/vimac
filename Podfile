@@ -13,6 +13,7 @@ target 'Vimac' do
   pod 'MASShortcut'
   pod 'Sparkle'
   pod 'Preferences'
+  pod 'Analytics', '~> 4.1'
 
   target 'VimacTests' do
     inherit! :search_paths

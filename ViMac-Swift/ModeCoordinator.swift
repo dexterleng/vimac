@@ -10,6 +10,7 @@ import Carbon
 import Cocoa
 import AXSwift
 import RxSwift
+import Segment
 
 protocol Coordinator {
     var windowController: OverlayWindowController { get set }
@@ -91,6 +92,8 @@ class ModeCoordinator : Coordinator {
             return
         }
         
+        Analytics.shared().track("Scroll Mode Activated")
+        
         let focusedWindowFrame = GeometryUtils.convertAXFrameToGlobal(focusedWindow.frame)
         let screenFrame = activeScreenFrame(focusedWindowFrame: focusedWindowFrame)
         
@@ -117,6 +120,8 @@ class ModeCoordinator : Coordinator {
             self.exitMode()
             return
         }
+        
+        Analytics.shared().track("Hint Mode Activated")
         
         let focusedWindowFrame: NSRect = GeometryUtils.convertAXFrameToGlobal(focusedWindow.frame)
         let screenFrame = activeScreenFrame(focusedWindowFrame: focusedWindowFrame)

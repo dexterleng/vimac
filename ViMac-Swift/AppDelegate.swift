@@ -13,6 +13,7 @@ import MASShortcut
 import Sparkle
 import LaunchAtLogin
 import Preferences
+import Segment
 
 @NSApplicationMain
     class AppDelegate: NSObject, NSApplicationDelegate {
@@ -59,6 +60,11 @@ import Preferences
             NSApp.terminate(self)
             return
         }
+        
+        let configuration = AnalyticsConfiguration(writeKey: "cjSicRrQ0dUgFkhmjDDur7974VfQKTlX")
+        configuration.trackApplicationLifecycleEvents = true // Enable this to record certain application events automatically!
+        configuration.recordScreenViews = true // Enable this to record screen views automatically!
+        Analytics.setup(with: configuration)
         
         setupPreferences()
         setupStatusItem()

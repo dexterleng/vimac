@@ -1,4 +1,5 @@
 PODS:
+  - Analytics (4.1.3)
   - AXSwift (0.3.1)
   - MASShortcut (2.4.0)
   - Preferences (2.2.0)
@@ -11,6 +12,7 @@ PODS:
   - Sparkle (1.24.0)
 
 DEPENDENCIES:
+  - Analytics (~> 4.1)
   - AXSwift (~> 0.2)
   - MASShortcut
   - Preferences
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Analytics
     - AXSwift
     - MASShortcut
     - Preferences
@@ -29,6 +32,7 @@ SPEC REPOS:
     - Sparkle
 
 SPEC CHECKSUMS:
+  Analytics: 4c01e3e19d4be86705bad6581a1c2aa5a15a9d22
   AXSwift: 24508e48dd103399d5e495201a8157a663029b92
   MASShortcut: d9e4909e878661cc42877cc9d6efbe638273ab57
   Preferences: 4894cc28df3557336b0b72440c893d95203d3e33
@@ -37,6 +41,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Sparkle: 270cd27377bf04e9c128af06e3a22d0f572d6ee3
 
-PODFILE CHECKSUM: 7b6ba65266337439d7050314252aa63d075aba9b
+PODFILE CHECKSUM: 1003c25f02e99aebf398427f76ff5303b706e8e5
 
 COCOAPODS: 1.9.2
