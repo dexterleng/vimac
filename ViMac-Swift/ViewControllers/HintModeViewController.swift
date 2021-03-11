@@ -166,7 +166,7 @@ class HintModeViewController: ModeViewController, NSTextFieldDelegate {
     
     func observeEscKey() {
         inputListener.observeEscapeKey(onEvent: { [weak self] _ in
-            Analytics.shared().track("Hint Mode Exited")
+            Analytics.shared().track("Hint Mode Deactivated")
             self?.onEscape()
         })
     }

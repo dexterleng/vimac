@@ -63,7 +63,7 @@ class ScrollModeViewController: ModeViewController {
         let escEvents = inputListener.keyDownEvents.filter { $0.keyCode == kVK_Escape }
         return escEvents
             .bind(onNext: { [weak self] _ in
-                Analytics.shared().track("Scroll Mode Exited")
+                Analytics.shared().track("Scroll Mode Deactivated")
                 self?.modeCoordinator?.exitMode()
             })
     }
