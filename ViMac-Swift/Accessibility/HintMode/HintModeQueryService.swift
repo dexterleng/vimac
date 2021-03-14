@@ -37,7 +37,8 @@ class HintModeQueryService {
             Utils.singleToObservable(single: queryMenuBarSingle()),
             Utils.singleToObservable(single: queryMenuBarExtrasSingle()),
             Utils.singleToObservable(single: queryNotificationCenterSingle()),
-            Utils.singleToObservable(single: queryWindowElementsSingle())
+            Utils.singleToObservable(single: queryWindowElementsSingle()),
+            Utils.singleToObservable(single: dockElements())
         ])
     }
     
@@ -98,6 +99,20 @@ class HintModeQueryService {
             let thread = Thread.init(block: {
                 let service = QueryNotificationCenterItemsService.init()
                 let elements = try? service.perform()
+                event(.success(elements ?? []))
+            })
+            thread.start()
+            return Disposables.create {
+                thread.cancel()
+            }
+        })
+    }
+    
+    private func dockElements() -> Single<[Element]> {
+        return Single.create(subscribe: { event in
+            let thread = Thread.init(block: {
+                let service = QueryDockService.init()
+                let elements = service.perform()
                 event(.success(elements ?? []))
             })
             thread.start()

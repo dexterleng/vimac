@@ -15,6 +15,7 @@
 		E20451B125F3ADB600CBFC7A /* UserDefaultsProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20451B025F3ADB600CBFC7A /* UserDefaultsProperties.swift */; };
 		E20451B525F3B50400CBFC7A /* ExperimentalPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20451B425F3B50400CBFC7A /* ExperimentalPreferenceViewController.swift */; };
 		E20451B925F4DDDC00CBFC7A /* AXEnhancedUserInterfaceActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20451B825F4DDDC00CBFC7A /* AXEnhancedUserInterfaceActivator.swift */; };
+		E204521325FDD38F00CBFC7A /* QueryDockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E204521225FDD38F00CBFC7A /* QueryDockService.swift */; };
 		E20696F923290D41001EFDB2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20696F823290D41001EFDB2 /* Log.swift */; };
 		E2069700232A52EA001EFDB2 /* AlphabetHints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20696FF232A52EA001EFDB2 /* AlphabetHints.swift */; };
 		E20D0CB425581AEF00A5CAEE /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20D0CB325581AEF00A5CAEE /* Trie.swift */; };
@@ -143,6 +144,7 @@
 		E20451B025F3ADB600CBFC7A /* UserDefaultsProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProperties.swift; sourceTree = "<group>"; };
 		E20451B425F3B50400CBFC7A /* ExperimentalPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalPreferenceViewController.swift; sourceTree = "<group>"; };
 		E20451B825F4DDDC00CBFC7A /* AXEnhancedUserInterfaceActivator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXEnhancedUserInterfaceActivator.swift; sourceTree = "<group>"; };
+		E204521225FDD38F00CBFC7A /* QueryDockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDockService.swift; sourceTree = "<group>"; };
 		E20696F823290D41001EFDB2 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E20696FC232A0021001EFDB2 /* VimacBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VimacBridgingHeader.h; sourceTree = "<group>"; };
 		E20696FF232A52EA001EFDB2 /* AlphabetHints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetHints.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				E23140D92507B2C1004D1B96 /* QueryNotificationCenterItemsService.swift */,
 				E2D7B12325BBF71000EA2531 /* FlattenElementTreeNode.swift */,
 				E20DF9DD25E671F20065711A /* HintModeQueryService.swift */,
+				E204521225FDD38F00CBFC7A /* QueryDockService.swift */,
 			);
 			path = HintMode;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				E23140D825067A46004D1B96 /* QueryMenuBarExtrasService.swift in Sources */,
 				E20451B925F4DDDC00CBFC7A /* AXEnhancedUserInterfaceActivator.swift in Sources */,
 				E20451B525F3B50400CBFC7A /* ExperimentalPreferenceViewController.swift in Sources */,
+				E204521325FDD38F00CBFC7A /* QueryDockService.swift in Sources */,
 				E25BBB5B250CC4AA00D11213 /* ObserveFrontmostApplicationService.swift in Sources */,
 				E225BD1D233292B800ECDEF4 /* StatusItemManager.swift in Sources */,
 				E267778E25613A900034B131 /* ScrollModeActiveViewController.swift in Sources */,
