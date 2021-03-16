@@ -193,13 +193,7 @@ import Preferences
         _ = self.compositeDisposable.insert(
             frontmostAppChange.onlyWhen(isAXManualAccessibilityEnabled)
                 .observeOn(axWorker)
-                .subscribe(onNext: { (__previousApp, currentApp) in
-                    if let _previousApp = __previousApp {
-                        if let previousApp = _previousApp {
-                            AXManualAccessibilityActivator.deactivate(previousApp)
-                        }
-                    }
-
+                .subscribe(onNext: { (_, currentApp) in
                     if let currentApp = currentApp {
                         AXManualAccessibilityActivator.activate(currentApp)
                     }
@@ -222,13 +216,7 @@ import Preferences
         _ = self.compositeDisposable.insert(
             frontmostAppChange.onlyWhen(isAXEnhancedUserInterfaceEnabled)
                 .observeOn(axWorker)
-                .subscribe(onNext: { (__previousApp, currentApp) in
-                    if let _previousApp = __previousApp {
-                        if let previousApp = _previousApp {
-                            AXEnhancedUserInterfaceActivator.deactivate(previousApp)
-                        }
-                    }
-
+                .subscribe(onNext: { (_, currentApp) in
                     if let currentApp = currentApp {
                         AXEnhancedUserInterfaceActivator.activate(currentApp)
                     }
